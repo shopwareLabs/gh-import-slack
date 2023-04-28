@@ -1,0 +1,22 @@
+/builds
+
+bootstrap
+lambda/slack/slack
+
+# Devenv
+.devenv*
+devenv.local.nix
+
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml
+
+# Teraform
+.terraform
+terraform.tfstate*
+.terraform.lock.hcl
+
+# Contains secrets
+/vars.tf
