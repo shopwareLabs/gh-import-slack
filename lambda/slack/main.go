@@ -58,8 +58,8 @@ func HandleRequest(req events.LambdaFunctionURLRequest) (events.LambdaFunctionUR
 				Value: "12611",
 			},
 			{
-				Label: "CT Administration",
-				Value: "12611",
+				Label: "CT Storefront",
+				Value: "12612",
 			},
 			{
 				Label: "Runtime Terror",
