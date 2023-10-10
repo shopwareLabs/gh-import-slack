@@ -61,7 +61,7 @@ module "queue" {
   function_name = "gh-slack-queue"
   handler       = "bootstrap"
   runtime       = "provided.al2"
-  memory_size   = 1024
+  memory_size   = 2048
   architectures = ["arm64"]
   timeout       = 300
 
