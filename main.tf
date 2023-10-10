@@ -5,6 +5,12 @@ terraform {
       version = "~> 4.0"
     }
   }
+
+  backend "s3" {
+    bucket = "shopware-gh-import"
+    key    = "tf"
+    region = "eu-central-1"
+  }
 }
 
 provider "aws" {
