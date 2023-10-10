@@ -47,7 +47,7 @@ func HandleRequest(req events.LambdaFunctionURLRequest) (events.LambdaFunctionUR
 	case slack.InteractionTypeShortcut:
 		prLinkInput := slack.NewTextInput("prLink", "PR Link", "")
 		prLinkInput.Subtype = "url"
-		prLinkInput.Placeholder = "https://github.com/shopware/platform/pull/1"
+		prLinkInput.Placeholder = "https://github.com/shopware/shopware/pull/1"
 		prTeamInput := slack.NewStaticSelectDialogInput("prTeam", "Team", []slack.DialogSelectOption{
 			{
 				Label: "CT Core",

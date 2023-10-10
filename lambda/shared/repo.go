@@ -8,7 +8,7 @@ type RepositoryMapping struct {
 
 func GetRepositoryMapping() map[string]RepositoryMapping {
 	return map[string]RepositoryMapping{
-		"shopware/platform": {
+		"shopware/shopware": {
 			JiraIssueKey:    "NEXT",
 			GitlabProjectId: 1,
 			GitlabCloneUrl:  "gitlab.shopware.com/shopware/6/product/platform.git",
