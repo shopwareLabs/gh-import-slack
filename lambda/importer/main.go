@@ -221,13 +221,11 @@ func importBranch(pr *github.PullRequest, commits []*github.RepositoryCommit, qu
 	}
 
 	prevMsg := commits[0].Commit.GetMessage()
-	newMsg := ""
+	newMsg := strings.Trim(prevMsg+"\nfixes #"+strconv.Itoa(pr.GetNumber()), " ")
 
-	if !strings.HasPrefix(prevMsg, queueMessage.JiraTicket) {
-		newMsg = queueMessage.JiraTicket
+	if !strings.HasPrefix(newMsg, queueMessage.JiraTicket) {
+		newMsg = fmt.Sprintf("%s - %s", queueMessage.JiraTicket, newMsg)
 	}
-
-	newMsg = newMsg + " - " + prevMsg + "\nfixes #" + strconv.Itoa(pr.GetNumber())
 
 	cmd = exec.Command("git", "commit", "--amend", "-m", newMsg)
 	cmd.Dir = tmpDir
@@ -235,7 +233,7 @@ func importBranch(pr *github.PullRequest, commits []*github.RepositoryCommit, qu
 		return "", fmt.Errorf("error while amending commit: %s %s", err.Error(), string(output))
 	}
 
-	cmd = exec.Command("git", "push", "-u", fmt.Sprintf("https://%s:%s@%s", os.Getenv("GITLAB_USERNAME"), os.Getenv("GITLAB_PASSWORD"), mapping.GitlabCloneUrl), localBranch)
+	cmd = exec.Command("git", "push", "-f", "-u", fmt.Sprintf("https://%s:%s@%s", os.Getenv("GITLAB_USERNAME"), os.Getenv("GITLAB_PASSWORD"), mapping.GitlabCloneUrl), localBranch)
 	cmd.Dir = tmpDir
 	if output, err := cmd.CombinedOutput(); err != nil {
 		return "", fmt.Errorf("error while pushing branch: %s %s", err.Error(), string(output))

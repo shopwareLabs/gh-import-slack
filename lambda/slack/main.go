@@ -81,6 +81,18 @@ func HandleRequest(req events.LambdaFunctionURLRequest) (events.LambdaFunctionUR
 				Label: "Codebusters",
 				Value: "12607",
 			},
+			{
+				Label: "Golden Stars",
+				Value: "11900",
+			},
+			{
+				Label: "Golden Plus",
+				Value: "12657",
+			},
+			{
+				Label: "Stranger Codes",
+				Value: "11928",
+			},
 		})
 		prTeamInput.Optional = false
 
