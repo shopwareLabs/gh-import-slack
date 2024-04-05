@@ -28,10 +28,5 @@ func GetRepositoryMapping() map[string]RepositoryMapping {
 			GitlabProjectId: 69,
 			GitlabCloneUrl:  "gitlab.shopware.com/shopware/6/services/swagmigrationmagento.git",
 		},
-		"shopware/SwagPlatformDemoData": {
-			JiraIssueKey:    "NEXT",
-			GitlabProjectId: 1,
-			GitlabCloneUrl:  "gitlab.shopware.com/shopware/6/services/demodata-plugin.git",
-		},
 	}
 }
