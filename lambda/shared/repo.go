@@ -7,7 +7,7 @@ type RepositoryMapping struct {
 }
 
 func GetRepositoryMapping() map[string]RepositoryMapping {
-	return map[string]RepositoryMapping{
+	return map[string]RepositoryMapping {
 		"shopware/shopware": {
 			JiraIssueKey:    "NEXT",
 			GitlabProjectId: 1,
@@ -18,11 +18,11 @@ func GetRepositoryMapping() map[string]RepositoryMapping {
 			GitlabProjectId: 7,
 			GitlabCloneUrl:  "gitlab.shopware.com:shopware/6/services/paypal.git",
 		},
-        "shopware/SwagMigrationAssistant": {
-            JiraIssueKey:    "MIG",
-            GitlabProjectId: 10,
-            GitlabCloneUrl:  "gitlab.shopware.com:shopware/6/services/migration-assistant.git",
-        },
+		"shopware/SwagMigrationAssistant": {
+			JiraIssueKey:    "MIG",
+			GitlabProjectId: 10,
+			GitlabCloneUrl:  "gitlab.shopware.com:shopware/6/services/migration-assistant.git",
+		},
 		"shopware/SwagMigrationConnector": {
 			JiraIssueKey:    "MIG",
 			GitlabProjectId: 102,
