@@ -3,11 +3,11 @@
     "devenv": {
       "locked": {
         "dir": "src/modules",
-        "lastModified": 1712300418,
+        "lastModified": 1718001032,
         "owner": "cachix",
         "repo": "devenv",
-        "rev": "8827aa19daf1fc3f53e7adcc7201933ef28f8652",
-        "treeHash": "178f1241b3bfb93735f76537fa286cdf214318b0",
+        "rev": "50e981f8a08cc06553ac591c658f347f6087d836",
+        "treeHash": "713cef6537e6649951b2ac4c0e497a4b349cf9b7",
         "type": "github"
       },
       "original": {
@@ -30,24 +30,6 @@
       "original": {
         "owner": "edolstra",
         "repo": "flake-compat",
-        "type": "github"
-      }
-    },
-    "flake-utils": {
-      "inputs": {
-        "systems": "systems"
-      },
-      "locked": {
-        "lastModified": 1710146030,
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "b1d9ab70662946ef0850d488da1c9019f3a9752a",
-        "treeHash": "bd263f021e345cb4a39d80c126ab650bebc3c10c",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
         "type": "github"
       }
     },
@@ -74,11 +56,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1712192574,
+        "lastModified": 1717868076,
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "f480f9d09e4b4cf87ee6151eba068197125714de",
-        "treeHash": "cefb9a3658fbb835a0a97ed92eab5cd82b8e21f6",
+        "rev": "cd18e2ae9ab8e2a0a8d715b60c91b54c0ac35ff9",
+        "treeHash": "071c9c719e22990efab09ecd15232f43be8233b6",
         "type": "github"
       },
       "original": {
@@ -90,11 +72,11 @@
     },
     "nixpkgs-stable": {
       "locked": {
-        "lastModified": 1712168706,
+        "lastModified": 1717880976,
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "1487bdea619e4a7a53a4590c475deabb5a9d1bfb",
-        "treeHash": "7b1978f9e075f83639f8caed78916f6b025e6519",
+        "rev": "4913a7c3d8b8d00cb9476a6bd730ff57777f740c",
+        "treeHash": "f33c37ad78e3f4a23a795047af81e16e0dd4e6a2",
         "type": "github"
       },
       "original": {
@@ -107,7 +89,6 @@
     "pre-commit-hooks": {
       "inputs": {
         "flake-compat": "flake-compat",
-        "flake-utils": "flake-utils",
         "gitignore": "gitignore",
         "nixpkgs": [
           "nixpkgs"
@@ -115,11 +96,11 @@
         "nixpkgs-stable": "nixpkgs-stable"
       },
       "locked": {
-        "lastModified": 1712055707,
+        "lastModified": 1717664902,
         "owner": "cachix",
         "repo": "pre-commit-hooks.nix",
-        "rev": "e35aed5fda3cc79f88ed7f1795021e559582093a",
-        "treeHash": "41bee5f5bd9314a987ef3d7cba730fb6aa264a4e",
+        "rev": "cc4d466cb1254af050ff7bdf47f6d404a7c646d1",
+        "treeHash": "def977583217aad11744d144c1f7fc216ce450bf",
         "type": "github"
       },
       "original": {
@@ -133,21 +114,6 @@
         "devenv": "devenv",
         "nixpkgs": "nixpkgs",
         "pre-commit-hooks": "pre-commit-hooks"
-      }
-    },
-    "systems": {
-      "locked": {
-        "lastModified": 1681028828,
-        "owner": "nix-systems",
-        "repo": "default",
-        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
-        "treeHash": "cce81f2a0f0743b2eb61bc2eb6c7adbe2f2c6beb",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-systems",
-        "repo": "default",
-        "type": "github"
       }
     }
   },
