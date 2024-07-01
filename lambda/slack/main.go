@@ -93,6 +93,10 @@ func HandleRequest(req events.LambdaFunctionURLRequest) (events.LambdaFunctionUR
 				Label: "Stranger Codes",
 				Value: "11928",
 			},
+			{
+				Label: "Barware",
+				Value: "12400",
+			},
 		})
 		prTeamInput.Optional = false
 
