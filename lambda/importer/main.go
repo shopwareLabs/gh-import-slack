@@ -132,17 +132,6 @@ func handleMessage(queueMessage shared.ImportMessage, ctx context.Context) {
 
 	api.SendMessageContext(ctx, queueMessage.SlackUser, slack.MsgOptionText(fmt.Sprintf("Created merge request: %s\nJira ticket: %s/browse/%s", mr.WebURL, os.Getenv("JIRA_HOST"), queueMessage.JiraTicket), false))
 
-	body := `Hello,
-
-thank you for creating this pull request.
-I have opened an issue on our Issue Tracker for you. See the issue link: https://issues.shopware.com/issues/%s
-
-Please use this issue to track the state of your pull request.`
-
-	client.Issues.CreateComment(ctx, queueMessage.Repository.Owner, queueMessage.Repository.Repo, prID, &github.IssueComment{
-		Body: aws.String(fmt.Sprintf(body, queueMessage.JiraTicket)),
-	})
-
 	client.Issues.AddLabelsToIssue(ctx, queueMessage.Repository.Owner, queueMessage.Repository.Repo, prID, []string{"Scheduled"})
 }
 
